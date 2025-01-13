@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Food Distribution",
+    "organization": "Mid Valley Family YMCA",
+    "description": "Distributing food to community members",
+    "date": "2025-01-16",
+    "location": "6901 Lennox Avenue, Van Nuys",
+    "latitude": 34.196638,
+    "longitude": -118.446066,
+    "contact": "https://www.ymcala.org/community-response",
+    "startTime": "10:00 AM",
+    "endTime": "12:00 PM",
+    "imageURL": "https://ymcaboston.org/wp-content/uploads/2022/06/food-access-distribution.jpg"
+  },
+  {
+    "title": "Food Distribution",
+    "organization": "Weingart East Los Angeles YMCA",
+    "description": "Distributing food to community members",
+    "date": "2025-01-13",
+    "location": "2900 Whittier Boulevard, Los Angeles",
+    "latitude": 34.030960,
+    "longitude": -118.209053,
+    "contact": "https://www.ymcala.org/community-response#close",
+    "startTime": "9:00 AM",
+    "endTime": "11:00 AM",
+    "imageURL": "https://bathymca.org/wordpress/wp-content/uploads/2019/05/Y-Logo-for-Thank-You-Page.jpg"
+  },
+  {
+    "title": "Food Distribution",
+    "organization": "Weingart YMCA & Aquatic Center",
+    "description": "Distributing food to community members",
+    "date": "2025-01-14",
+    "location": "9900 S Vermont Avenue, Los Angeles",
+    "latitude": 33.946341,
+    "longitude": -118.291517,
+    "contact": "https://www.ymcala.org/community-response#close",
+    "startTime": "9:30 AM",
+    "endTime": "11:30 AM",
+    "imageURL": "https://bathymca.org/wordpress/wp-content/uploads/2019/05/Y-Logo-for-Thank-You-Page.jpg"
+  },
+  {
+    "title": "Assemble Food Packages for Families! (Morning)",
+    "organization": "LA Regional Food Bank - Industry Building",
+    "description": "Assemble food packages for over 29,000 families, older adults, and children who face food insecurity in Los Angeles County. Minimum age to volunteer is 18.",
+    "date": "2025-01-16",
+    "location": "2300 Pellissier Place, City of Industry, CA 90601",
+    "latitude": 34.030076,
+    "longitude": -118.029623,
+    "contact": "https://www.cervistech.com/acts/console.php?console_type=event&console_id=0338&cat_id=&filter_choice=&cal_choice=&res_choice=&res_code=&source=",
+    "startTime": "9:00 AM",
+    "endTime": "12:00 PM",
+    "imageURL": "https://cdn.cervistech.com/acts/module/display_event_photo.php?event_id=12682&org_id=0338&ver=1a82a65027d2c324558217e0a22f6a366b57990cd3bb1ad20c8f37a5f8ba5799"
+  },
+  {
+    "title": "Assemble Food Packages for Families! (Afternoon)",
+    "organization": "LA Regional Food Bank - Industry Building",
+    "description": "Assemble food packages for over 29,000 families, older adults, and children who face food insecurity in Los Angeles County. Minimum age to volunteer is 18.",
+    "date": "2025-01-16",
+    "location": "2300 Pellissier Place, City of Industry, CA 90601",
+    "latitude": 34.030076,
+    "longitude": -118.029623,
+    "contact": "https://www.cervistech.com/acts/console.php?console_type=event&console_id=0338&cat_id=&filter_choice=&cal_choice=&res_choice=&res_code=&source=",
+    "startTime": "1:00 PM",
+    "endTime": "3:30 PM",
+    "imageURL": "https://cdn.cervistech.com/acts/module/display_event_photo.php?event_id=12682&org_id=0338&ver=1a82a65027d2c324558217e0a22f6a366b57990cd3bb1ad20c8f37a5f8ba5799"
+  },
+  {
+    "title": "Serve Meals - Dinner Shift",
+    "organization": "Union Rescue Mission",
+    "description": "Angeles House is our newest facility that opened in April of 2022. Angeles House currently shelters about 86 families in South Los Angeles. Help us prepare and serve dinner meals, to those that are sheltered within our facility. Volunteers must be at least 14 and have a chaperone if under 18.",
+    "date": "2025-01-16",
+    "location": "13200 S Avalon Blvd, Los Angeles, CA 90061",
+    "latitude": 33.912642,
+    "longitude": -118.264273,
+    "contact": "https://www.cervistech.com/acts/console.php?console_id=0267&console_type=event&ht=1",
+    "startTime": "3:30 PM",
+    "endTime": "7:00 PM",
+    "imageURL": "https://www.closerweekly.com/wp-content/uploads/2019/12/im.angelabassett_79512249_174814000384240_3866053781949324538_n.jpg?fit=1080%2C1080"
+  }
+]

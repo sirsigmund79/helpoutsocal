@@ -1,0 +1,489 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Use a font that complements the style */
+  margin: 0;
+  background-color: #f0f5f1; /* Light beige background */
+  color: #314e41; /* Dark teal/green text */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Bar */
+.title-bar {
+  background-color: #314e41;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Align title and menu toggle */
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for absolute positioning of the toggle */
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px; /* Limit width on larger screens */
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #314e41;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #d0e8df;
+  color: #222;
+  outline: none;
+}
+
+/* Hamburger Menu (Mobile) */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 1.5em;
+  color: white;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+nav.open ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav.open .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav.open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+nav.open .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .title-bar {
+      flex-direction: column; /* Stack title and menu toggle */
+      align-items: flex-start; /* Align to the left */
+      text-align: left;
+  }
+  nav {
+      display: none; /* Hide the menu by default on mobile */
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+  }
+
+  nav ul {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  nav li {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  nav a {
+      display: block;
+      padding: 10px;
+  }
+
+  .menu-toggle {
+      display: block; /* Show hamburger on mobile */
+      align-self: flex-end;
+  }
+
+  nav.open {
+      display: block;
+  }
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 95%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid #d0e8df;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px; /* Consistent min-height */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Bubble */
+.card-bubble {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #314e41;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-bubble span {
+  display: block;
+  margin: 1px 0;
+  font-size: 0.7em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Image Container */
+.image-container {
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8f5e9; /* Lightest green background for placeholder */
+}
+
+.card-image, .placeholder-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  opacity: 0.7; /* Make it a bit translucent */
+}
+
+/* Card Content */
+.card-content {
+  height: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #314e41;
+  text-shadow: none;
+}
+
+.text-background {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* Buttons */
+button,
+#submitContact,
+.card-footer a {
+  background-color: #5aa775;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover,
+#submitContact:hover,
+.card-footer a:hover {
+  background-color: #4c8a5f;
+}
+
+button:focus,
+#submitContact:focus,
+.card-footer a:focus {
+  outline: 2px solid #4c8a5f;
+  outline-offset: -2px;
+}
+
+button:active,
+#submitContact:active,
+.card-footer a:active {
+  transform: scale(0.98);
+}
+
+/* Swipe Buttons */
+#swipeRight,
+#swipeLeft {
+  padding: 10px 16px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #d0e8df;
+  background-color: #e8f5e9;
+  color: #314e41;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+#swipeRight:hover,
+#swipeLeft:hover {
+  background-color: #d0e8df;
+  border-color: #b3d1c3;
+}
+
+#swipeRight:focus,
+#swipeLeft:focus {
+  outline: 2px solid #b3d1c3;
+  outline-offset: -2px;
+}
+
+#swipeRight:active,
+#swipeLeft:active {
+  transform: scale(0.95);
+}
+/* Illustrations */
+.illustration {
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Contact Form Styles */
+#contactForm {
+  background-color: #fff;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  color: #314e41; /* Match text color */
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: flex; /* Use flexbox to align label and span */
+    justify-content: space-between; /* Align to opposite ends */
+}
+
+#contactForm .required {
+    color: red; /* Make required asterisk red */
+    margin-left: 0px;
+}
+
+#contactForm .optional {
+    color: #777; /* Gray color for optional text */
+    font-style: italic;
+    margin-left: 0px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: calc(100% - 26px);
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d0e8df; /* Light green border */
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #314e41; /* Match text color */
+  transition: border-color 0.3s;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: 2px solid #5aa775; /* Green outline on focus */
+  border-color: #5aa775;
+}
+/*#contactForm input {
+  width: calc(100% - 22px); 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+*/
+
+/* Swipe Buttons */
+#swipeRight, #swipeLeft {
+  width: 150px; /* Set a fixed width */
+  font-size: 1.2em; /* Slightly larger font */
+}
+
+/* Thank You Message */
+#thankYouMessage {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f0e3;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card, #contactForm, #thankYouMessage {
+      margin: 10px;
+      width: 90%;
+  }
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+  nav li {
+      margin: 10px 0;
+  }
+  #swipeRight, #swipeLeft {
+      width: 120px;
+      font-size: 1em;
+  }
+}
+
+/* Swipe Animation */
+.card.swiping {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition */
+}
+
+.card.swipe-right {
+  transform: translateX(500px) rotate(30deg); /* Move right and rotate */
+  opacity: 0; /* Fade out */
+}
+
+.card.swipe-left {
+  transform: translateX(-500px) rotate(-30deg); /* Move left and rotate */
+  opacity: 0; /* Fade out */
+}
+
+.landing-section {
+  text-align: center;
+  margin: 20px auto; /* Center the section */
+  max-width: 800px; /* Set a maximum width */
+  padding: 0 20px; /* Add some side padding for smaller screens */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.landing-section h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #314e41;
+  margin-bottom: 15px;
+}
+
+.landing-section p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.zip-code-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.zip-code-input input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+.zip-code-input button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #5aa775;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally within the column */
+  margin-bottom: 20px;
+}
+
+#locationInput{
+  margin-bottom: 10px;
+}

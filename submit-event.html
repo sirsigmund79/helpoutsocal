@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Events</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div class="title-bar">
+        Help Out SoCal
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="submit-event">Submit Events</a></li>
+        <li><a href="about">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      
+        <div class="container">
+            <h1>Submit Events</h1>
+            <p>Want to share a volunteer opportunity related to LA fire relief efforts? Please send the event details including date, time, location, and a description to HelpOutSoCal@gmail.com.</p>
+            <p>I'll review your submission and add it to the site as soon as possible.</p>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+            $(".menu-toggle").click(function () {
+                $("nav").toggleClass("open");
+            });
+        });
+    </script>
+</body>
+</html>

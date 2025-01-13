@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-content {
+      padding: 20px;
+    }
+
+    .about-content p {
+      margin-bottom: 20px;
+    }
+
+    .about-content h1,
+    .about-content h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title-bar">
+    Help Out SoCal
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="submit-event">Submit Events</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="about-content">
+        <h1>What's the point of this?</h1>
+        <p>Good question. Deep down, it's probably a vanity project to alleviate some guilt about not being home to do more to help after the recent devastating fires in Southern California. <i>(just kidding, sorta)</i></p>
+
+        <h2>Who am I?</h2>
+        <p>I'm Parker. While I live in Detroit now, I grew up in Simi Valley and wanted to help in some way after the recent fires.</p>
+
+        <h2>What does this site do?</h2>
+        <p>This is a simple resource with two goals. The first, make it easy for anyone in SoCal to find a place they can volunteer and help out.</p>
+        <p>The second is to start a conversation with charity leaders and community organizers. I know this isn't solving the most pressing issues, but it's something I could build in a few hours from where I am now. I hope this is a conversation starter—that organizations on the ground see this and reach out with the more important technological needs they have.</p>
+
+        <p>Let's talk! If you're running an organization or are a community organizer and have more significant tech needs, please email me at HelpOutSoCal@gmail.com.</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    $(document).ready(function() {
+      $(".menu-toggle").click(function() {
+        $("nav").toggleClass("open");
+      });
+    });
+  </script>
+</body>
+
+</html>

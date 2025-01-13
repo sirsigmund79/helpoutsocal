@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QY7HR8RMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4QY7HR8RMZ');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help Out SoCal</title>
@@ -57,8 +66,8 @@
         <label for="name">Name: <span class="required">*</span></label>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email: <span class="optional">(Optional)</span></label>
-        <input type="email" id="email" name="email"><br><br>
+        <label for="email">Email: <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="phone">Phone: <span class="optional">(Optional)</span></label>
         <input type="tel" id="phone" name="phone"><br><br>

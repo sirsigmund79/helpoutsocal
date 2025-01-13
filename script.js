@@ -83,6 +83,18 @@ function convertToISO8601Pacific(dateString) {
 }
 
 $(document).ready(function() {
+    const zipCodeInput = document.getElementById('zipCode');
+        // Check if the device is a mobile device
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+    
+        if (isMobileDevice()) {
+            zipCodeInput.type = 'tel'; // Use tel input type for number pad
+            zipCodeInput.inputMode = 'numeric'; // Further hint for numeric input
+            zipCodeInput.pattern = '[0-9]*'; // Optional: Add a pattern for numeric input
+            zipCodeInput.maxLength = 5; // Limit to 5 digits
+        }
     $(".menu-toggle").click(function() {
         $("nav").toggleClass("open");
     });
@@ -121,11 +133,16 @@ $(document).ready(function() {
     });
     $("#submitContact").click(function() {
       const name = $("#name").val();
+      const email = $("#email").val();
       if (!name) {
           alert("Name is required.");
           return;
       }
-      const email = $("#email").val();
+      if (!email) {
+        alert("Email is required.");
+        return;
+    }
+
       const phone = $("#phone").val();
 
       // Store contact info (replace with actual submission later)
